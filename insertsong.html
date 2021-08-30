@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/insertsong.css">
+	<title>Song details</title>
+</head>
+<body>
+	<div id="container">
+		<h1>Enter the details.</h1>
+		<form action="php/insertsong.php" method="POST" enctype="multipart/form-data">
+			<label>name</label>
+			<input type="text" name="name" placeholder="Enter Name" required><br>
+			<label>Song name</label>
+			<input type="file" name="s_name" placeholder="Enter song name" required><br>
+			<label>Singer name</label>
+			<input type="text" name="sin_name" placeholder="Enter Singer name" required><br>
+			<label>Release Date</label>
+			<input type="Date" name="Date_of_release" required><br>
+			<label>Album Name</label>
+			<input type="file" name="album" placeholder="Enter album name">
+			<label>Category</label>
+			<select name="Category">
+				<option value="" selected="hidden">Choose</option>
+				<option value="Bollywood">Bollywood</option>
+				<option value="Hollywood">Hollywood</option>
+				<option value="Punjabi">Punjabi</option>
+			</select>
+
+
+			<div id="clearfix">
+				<button type="reset" id="reset">Reset</button>
+				<button type="submit" id="insert" value="submit" name="submit">Insert</button>
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>
