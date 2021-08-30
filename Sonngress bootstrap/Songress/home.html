@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/index.css" rel="stylesheet"/>
+        <link href="css/indexmobileview.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+        <!-- Bootstrap links -->
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="bg">
+            <div id="blackLayer"></div>
+            <img src="bg.jpg"/>
+        </div>
+
+        <div id="topnav">
+            <div id="logo">
+
+            </div>
+            <div id="sitename">
+                <p>Songress<span style="color: red;">.</span><span style="color: white;">Com</span></p>
+            </div>
+            <div id="navcontent">
+                <ul>
+                    <li id="newlatest"><p>New Latest</p></li>
+                    <li><p onclick="toppicks(var1,var2)">Artist</p></li>
+                    <li><p>Genres</p></li>
+                    <li><p onclick="openprofilecard()">Login</p></li>
+                </ul>
+            </div>
+            <div id="navsidebar">
+                <p class="fa fa-bars" onclick="openprofilecard()"></p>
+            </div>
+        </div>
+
+        <div id="subnewlatest">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div id="homecontent">
+
+          <h3>Most Played</h3>
+          <div id="mostplayed" class="homesonglist">
+            <div style="display: none;">
+              <img src="">
+              <h5">Song name here</h5>
+            </div>  
+          </div>
+
+
+          <h3>Top 10 bollywood</h3>
+          <div id="top10bollywood" class="homesonglist">
+            <div style="display: none;">
+              <img src="">
+              <h5">Song name here</h5>
+            </div> 
+          </div>
+
+          <h3>Top 10 Punjabi</h3>
+          <div id="toptenpunjab" class="homesonglist">
+            <div style="display: none;">
+              <img src="">
+              <h5">Song name here</h5>
+            </div>  
+          </div>
+
+          <h3>Top 10 Hollywood</h3>
+          <div id="top10hollywood" class="homesonglist">
+            <div style="display: none;">
+              <img src="">
+              <h5">Song name here</h5>
+            </div> 
+          </div>
+
+          <h3>Top 10 Global</h3>
+          <div id="top10global" class="homesonglist">
+            <div style="display: none;">
+              <img src="">
+              <h5">Song name here</h5>
+            </div> 
+          </div>
+
+          <h3>Just Arrived</h3>
+          <div id="justarrived" class="homesonglist">
+            <div style="display: none;">
+              <img src="" alt="Songress.Com">
+              <h5>Song name here</h5>
+            </div>
+          </div>
+
+              <h3>Top picks</h3>
+              <div id="homesonglist" class="homesonglist">
+                <div style="display: none;">
+                    <img src="">
+                    <h5>Song name here</h5>
+                </div>  
+              </div>
+
+              <footer>
+                  <table>
+                      <tr>
+                          <th>Song</th>
+                          <th>Singer</th>
+                          <th>Genres</th>
+                      </tr>
+                      <tr>
+                        <td>
+                            <ol>
+                                <li>Song1</li>
+                                <li>Song2</li>
+                                <li>Song3</li>
+                                <li>Song4</li>
+                            </ol>
+                        </td>
+                          <td>
+                            <ol>
+                                <li>Singer1</li>
+                                <li>Singer2</li>
+                                <li>Singer3</li>
+                                <li>Singer4</li>
+                            </ol>
+                          </td>
+                          <td>
+                            <ol>
+                                <li>Genres1</li>
+                                <li>Genres2</li>
+                                <li>Genres3</li>
+                                <li>Genres4</li>
+                            </ol>
+                          </td>
+                      </tr>
+                  </table>
+                  <div id="sociallinks">
+                      <h6>Follow me on:</h6>
+                      <ul style="list-style-type: none;">
+                          <li><a href="https://www.instagram.com/mr_nobody0629/" style="text-decoration: none;"><label class="fa fa-instagram"></label></a></li>
+                          <li><label class="fa fa-youtube"></label><a href=""></a></li>
+                          <li><label class="fa fa-facebook"></label><a href=""></a></li>
+                          <li><label class="fa fa-twitter"></label><a href=""></a></li>
+                      </ul>
+                  </div>
+              </footer>
+
+              <div class="container-md">
+                <div class="spinner-grow text-muted"></div>
+                <div class="spinner-grow text-primary"></div>
+                <div class="spinner-grow text-success"></div>
+                <div class="spinner-grow text-info"></div>
+                <div class="spinner-grow text-warning"></div>
+                <div class="spinner-grow text-danger"></div>
+                <div class="spinner-grow text-secondary"></div>
+                <div class="spinner-grow text-dark"></div>
+                <div class="spinner-grow text-light"></div>
+              </div>
+        </div>
+
+        <div id="main">
+            <div id="image">
+                <img src="bg.jpg"/>
+            </div>
+            <div id="player">
+                <div id="songTitle">demo</div>
+               <!--<div id="singerName">demo</div>-->
+
+                <div id="currentTime">0:0</div>
+                <div id="seek-bar">
+                   <!--<input type="range" name="" min="0" max="100" id="seek-bar" class="myrange" value="0">-->
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="totalTime">0:0</div>
+
+                <div id="buttons">
+                    <button id="pre" onClick="pre()"><img src="icons/Pre.png" height="90%" width="90%"/></button>
+                    <button id="play" onClick="playOrPauseSong()"><img src="icons/Pause.png"/></button>
+                    <button id="next" onClick="next()"><img src="icons/Next.png" height="90%" width="90%"/></button>
+                    <button id="more" onclick="showqueue()"><i class="fas fa-align-right"></i></button>
+                </div>
+            </div>
+            <div id="minbar">
+                <button class="fa fa-sort-desc" onClick="myFunction()"></button>
+            </div>
+            <table id="footer">
+                    <td><input type="checkbox" id="love" checked /><label class="love" for="love"></label></td>
+                    <td><input type="checkbox" id="shuffle"/><label class="shuffle" for="shuffle"></label></td>
+                    <td><input type="checkbox" id="repeat" checked /><label class="repeat" for="repeat"></label></td>
+                    <td><input type="checkbox" id="options"/><label class="options" for="options"></label></td>
+            </table>
+        </div>
+
+        <div id="minmain">
+            <div id="minimage">
+                <img src="bg.jpg"/>
+            </div>
+            <div id="minsongTitle">Demo</div>
+            <div id="minplayer">
+                <div id="minseek-bar">
+                    <div id="minfill"></div>
+                    <div id="minhandle"></div>
+                </div>
+            </div>
+            <div id="minbuttons">
+                    <button id="minpre" onClick="pre()"><img src="icons/Pre.png"/></button>
+                    <button id="minplay" onClick="playOrPauseSong()"><img src="icons/Pause.png"/></button>
+                    <button id="minnext" onClick="next()"><img src="icons/Next.png"/></button>
+            </div>
+            <div id="maxbar">
+                <button class="fa fa-sort-asc" onClick="myFunction()"></button>
+            </div>
+        </div>
+
+        <div class="container" id="profilecard" style="z-index: 2;">
+          <div class="card bg-dark">
+            <img class="card-img-top" src="bg.jpg" style="width: 100%;">
+            <div class="card-body">
+              <h4 class="card-title text-white">Anuj Verma</h4>
+              <p class="card-text">Student of Enginering</p>
+              <button class="btn btn-primary" href=""></button>
+            </div>
+          </div>
+        </div>
+
+        <div id="songList">
+          <div id="sbbutton">
+            <h5>Current Queue</h5>
+            <button class="fa fa-eye-slash" onclick="hidequeue()"></button>
+          </div>
+            <!--<div id="songbox" class="1" style="display: none;">
+                <div id="songimg">
+                    <img src="" onclick="playSong(0)">
+                </div>
+                <div id="songdetails">
+                    <h5 id="sl1" onclick="playSong(0)">Song name here</h5>
+                    <p id="psl1">song singer name here</p>
+                </div>
+            </div>-->
+        </div>
+
+        <div id="addsection">
+          <button class="fa fa-sort-desc" onclick="addsectionhide()"></button>
+          <h5>Promote your brand here</h5>
+          <h6>Songress.com</h6>
+          <p>Make your music easier..</p>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/loadsong.js"></script>
+    <script type="text/javascript" src="js/createlist.js"></script>
+    <script type="text/javascript" src="js/functionality.js"></script>
+</html>

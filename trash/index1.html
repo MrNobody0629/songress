@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="index.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<div id="blackLayer"></div>
+		<img src="Poster1.jpg"/>
+	</div>
+
+	<div id="music-container">
+		<div id="music-playlist">
+		<div id="music-box">
+			<div id="music-info">
+				<div id="music-img">
+					<img src="../pexels-photo-346725.jpeg">
+				</div>
+				<div id="music-name">
+					<h6>Single song title</h6>
+					<p>single song name & directory</p>
+				</div>
+				<i id="fa fa-ellipsis-v"></i>
+			</div><hr>
+		</div>
+	</div>
+	<div id="main">
+			<div id="image">
+				<img src="poster1.jpg">
+			</div>
+			<div id="player">
+				<div id="controls">
+					<div id="songTitle">Demo</div>
+					<div id="buttons">
+						<button id="pre" onclick="pre()"><img src="Pre.png" height="90%" width="90%"/></button>
+                        <button id="play" onclick="playOrPauseSong()"><img src="Pause.png"/></button>
+                        <button id="next" onclick="next()"><img src="Next.png" height="90%" width="90%"/></button>
+                    </div>
+			    </div>   
+			<div id="seek-bar">
+				<div id="fill">
+					<div id="handle">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>

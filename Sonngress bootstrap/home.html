@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/indexmobile.css">
+</head>
+<body>
+	<div class="container-fluid bg-dark text-white" id="header">
+		<div class="row">
+			<img class="col-sm-1 img-fluid" src="logo.jpg" style="width: 20px;" alt="Logo">
+			<h1 class="col-sm-4 bg-dark">Songress.Com</h1>
+			<button class="col-sm btn btn-outline-success">Latest</button>
+			<button class="col-sm btn btn-outline-success">Artist</button>
+			<button class="col-sm btn btn-outline-success">Genres</button>
+			<button class="col-sm btn btn-outline-success">Release</button>
+			<button class="col-sm btn btn-outline-success">Login</button>
+		</div>
+	</div>
+	<div class="container-fluid bg-secondary" id="homecontent">
+
+		<h3>Most Played</h3>
+		<div class="list-group list-group-horizontal homesonglist" id="mostplayed">
+			<div class="card card-outline-success" style="display: none;">
+				<img class="card-img" src="logo.jpg" alt="Card image">
+				<h5 class="card-img-overlay text-bottom">Songname</h5>
+			</div>
+		</div>
+
+
+		<h3>Top 10 bollywood</h3>
+		<div class="list-group list-group-horizontal homesonglist" id="t10bollywood">
+		</div>
+
+		<h3>Top 10 Hollywood</h3>
+		<div class="list-group list-group-horizontal homesonglist" id="t10hollywood">
+		</div>
+
+        <h3>Just Arrived</h3>
+        <div class="list-group list-group-horizontal homesonglist" id="justarrive">
+		</div>
+
+        <h3>Top picks</h3>
+        <div class="list-group list-group-horizontal homesonglist" id="toppicks">
+		</div>
+	</div>
+	<!-- Song List container -->
+	<div class="container bg-primary" id="songList" style="height: 600px;">
+		<h2>Queue</h2>
+		<div class="row">
+			<div class="card col-sm-2" style="height: 40px;">
+				<img src="logo.jpg" class="img-fluid">
+			</div>
+			<h5 class="col-sm">S-name</h5>
+			<p class="col-sm">:</p>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-dark text-white" id="maxplayer" style="display: none;">
+		<img id="max-pl-img" src="logo.jpg">
+		<button class="fa fa-angle-down btn btn-outline-primary" style="top: 2px; right: 2px; position: absolute;" onclick="hidemaxbar()"></button>
+		<h5 class="" id="max-pl-s-name">Song</h5>
+		<h5 class="" id="max-pl-sin-name">Singer</h5>
+		<div class="row" id="max-bt-bar">
+			<div class="col-sm-0" id="dur-curr"></div>
+			<div class="col-sm-4 progress-bar" id="myProgress">
+				<input type="range" min="1" max="100" value="0" id="max-fill">
+			</div>
+			<div class="col-sm-0" id="dur-tot"></div>
+			<button class="fa fa-step-backward btn btn-outline-primary" onclick="pre()" id="pre"></button>
+			<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			<button class="fa fa-pause btn btn-outline-primary" onclick="playOrPauseSong()" id="max-playorpause"></button>
+			<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			<button class="fa fa-step-forward btn btn-outline-primary" onclick="next()" id="next"></button>
+			<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			<button class="fa fa-volume-up btn btn-outline-primary" onclick="volumecontrol()"></button>
+			<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			<div class="progress-bar" style="background-color: inherit;">
+				<input type="range" name="" min="1" max="100" value="40">
+			</div>
+			<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			<button class="fa fa-align-justify btn btn-outline-primary"></button>
+			<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+		</div>
+	</div>
+
+	<div class="container-fluid bg-dark text-white" id="minplayer" style="display: none;">
+		<div class="row">
+			<img class="col-sm-1" src="logo.jpg" id="min-pl-img">
+			<h5 class="col-sm-2" id="min-pl-s-name"></h5>
+			<div class="col-sm-4 progress-bar" style="background-color: inherit;">
+				<input type="range" name="" min="1" max="100" value="0" id="min-fill">
+			</div>
+			<div class="col-sm-4 list-group list-group-horizontal" id="minplayer-btn">
+				<button class="fa fa-step-backward btn btn-outline-primary" onclick="pre()"></button>
+				<button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			    <button class="fa fa-pause btn btn-outline-primary" onclick="playOrPauseSong()"id="min-playorpause"></button>
+			    <button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			    <button class="fa fa-step-forward btn btn-outline-primary" onclick="next()"></button>
+			    <button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			    <button class="fa fa-volume-up btn btn-outline-primary"></button>
+			    <button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			    <div class="progress-bar" style="background-color: inherit;">
+			    	<input type="range" name="" min="1" max="100" value="40">
+			    </div>
+			    <button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+			    <button class="fa fa-align-justify btn btn-outline-primary"></button>
+			    <button class="disable" style="color: inherit;background-color: inherit;border: none;"></button>
+
+			    <button class="fa fa-angle-up btn btn-outline-primary" style="float: right;" onclick="hideminbar()"></button>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/functionality.js"></script>
+<script type="text/javascript" src="js/loadhome.js"></script>
+<script type="text/javascript" src="js/loadsong.js"></script>
+</html>

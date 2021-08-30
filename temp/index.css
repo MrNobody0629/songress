@@ -1,0 +1,11 @@
+#header
+{
+	height: 60px;
+	overflow: auto;
+}
+
+.col-container
+{
+	display: flex;
+	width: 100%;
+}

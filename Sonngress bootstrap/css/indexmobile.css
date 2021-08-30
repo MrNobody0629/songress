@@ -1,0 +1,8 @@
+@media screen and (max-width: 600px)
+{
+	#homecontent
+	{
+		width: 100%;
+		padding: 8px;
+	}
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="indexmobile.css">
+
+  <script type="text/javascript">
+    alert("cshvskjvsk");
+    var imgarr = ["img1.png","img2.jpeg"];
+var hdarr = ["20 places to visit in New Delhi","The religions of India"];
+var txt = "India is a beautiful country, there is no doubt about that, its cultural diversity provides thousands of perspectives for the most intrepid traveler; from natural landscapes of incalculable beauty, to palaces, museums, temples, galleries and popular squares that leave anyone astonished; every corner of this wonderful country has something to offer.";
+
+window.onload = function loadsong()
+{
+      window.alert("Hello wonderful");
+      var img = document.createElement("img");
+      img1.setAttribute("src","img1.png");
+      img1.setAttribute("style","width: 100%;height: 100%;");
+
+      var div1 = document.createElement("div");
+      div1.setAttribute("class","col-sm-10");
+      div1.appendChild(img1);
+
+      var h = document.createElement("h2");
+      var p = document.createElement("p");
+      var a = document.createElement("a");
+
+      h.appendChild(document.createTextNode("20 places to visit in New Delhi","The religions of India");
+      p.setAttribute("class","text-success");
+
+      p.appendChild(document.createTextNode("India is a beautiful country, there is no doubt about that, its cultural diversity provides thousands of perspectives for the most intrepid traveler; from natural landscapes of incalculable beauty, to palaces, museums, temples, galleries and popular squares that leave anyone astonished; every corner of this wonderful country has something to offer.");
+      a.setAttribute("href","#");
+      a.setAttribute("class","btn btn-primary");
+
+      a.appendChild(document.createTextNode("See more..");
+
+      var div2 = document.createElement("div");
+      div2.setAttribute("class","col-sm-2");
+
+      div2.appendChild(h);
+      div2.appendChild(p);
+      div2.appendChild(a);
+
+      var divf = document.getElementById("cardview");
+
+      divf.setAttribute("class","container-fluid bg-dark text-white list-group list-group-horizontal");
+      divf.setAttribute("style","height: 500px;");
+
+      divf.appendChild(div1);
+      divf.appendChild(div2);
+      // body...
+      addcard(imgarr,hdarr,txt);
+}
+
+function addcard(imgar,hdar,txtt) 
+{
+      for (var i = 0; i < imgar.length; i++) 
+      {
+      // body...
+      if (i%2 == 0)
+      {
+            var img = document.createElement("img");
+
+            img.setAttribute("src",imgar[i]);
+            img.setAttribute("style","width: 100%;height: 100%;");
+
+            var div1 = document.createElement("div");
+
+            div1.setAttribute("class","col-sm-10");
+
+            div1.appendChild(img);
+
+            var h = document.createElement("h2");
+            var p = document.createElement("p");
+            var a = document.createElement("a");
+
+            h.appendChild(document.createTextNode(hdar[i]));
+            p.setAttribute("class","text-success");
+
+            p.appendChild(document.createTextNode(txtt));
+            a.setAttribute("href","#");
+            a.setAttribute("class","btn btn-primary");
+
+            a.appendChild(document.createTextNode("See more..");
+
+            var div2 = document.createElement("div");
+            div2.setAttribute("class","col-sm-2");
+
+            div2.appendChild(h);
+            div2.appendChild(p);
+            div2.appendChild(a);
+
+            var divf = document.getElementById("cardview");
+
+            divf.setAttribute("class","container-fluid bg-dark text-white list-group list-group-horizontal");
+            divf.setAttribute("style","height: 500px;");
+
+            divf.appendChild(div1);
+            divf.appendChild(div2);
+
+            i++;
+      }
+      else
+      {
+            var img = document.createElement("img");
+
+            img.setAttribute("src",imgar[i]);
+            img.setAttribute("style","width: 100%;height: 100%;");
+
+            var div1 = document.createElement("div");
+
+            div1.setAttribute("class","col-sm-10");
+
+            div1.appendChild(img);
+
+            var h = document.createElement("h2");
+            h.appendChild(document.createTextNode(hdar[i]));
+            var p = document.createElement("p");
+            var a = document.createElement("a");
+            p.setAttribute("class","text-primary");
+            p.appendChild(document.createTextNode(txtt));
+            a.setAttribute("href","#");
+            a.setAttribute("class","btn btn-success");
+            a.appendChild(document.createTextNode("See more..");
+
+            var div2 = document.createElement("div");
+            div2.setAttribute("class","col-sm-2");
+
+            div2.appendChild(h);
+            div2.appendChild(p);
+            div2.appendChild(a);
+
+            var divf = document.getElementById("cardview");
+
+            divf.setAttribute("class","container-fluid bg-dark text-white list-group list-group-horizontal");
+            divf.setAttribute("style","height: 500px;");
+
+            divf.appendChild(div2);
+            divf.appendChild(div1);
+
+            i++;
+      }
+}
+}
+
+ 
+  </script>
+
+</head>
+<body>
+  <div class="container-fluid bg-dark text-white list-group list-group-horizontal" id="header">
+    <div class="col-sm-1 card bg-dark"><img class="img-fluid" style="width: 100%;height: 100%;" src="logo.png" alt="Logo"></div>
+    <button class="col-sm btn btn-outline-success">Start</button>
+    <button class="col-sm btn btn-outline-success">Equipment</button>
+    <button class="col-sm btn btn-outline-success">Bollywood Channel</button>
+    <button class="col-sm btn btn-outline-success">Chai With Bollywood</button>
+    <button class="col-sm btn btn-outline-success">Folk dances</button>
+    <button class="col-sm btn btn-outline-success">Cafe Cultural</button>
+    <button class="col-sm btn btn-outline-success">Travel to India</button>
+    <button class="col-sm btn btn-outline-success">Blogs</button>
+    <button class="col-sm btn btn-outline-success">Sounds Of India</button>
+    <button class="col-sm btn btn-outline-success">Contact</button>
+  </div>
+  <div class="container-fluid p-5 bg-dark text-white">
+    <h1>places to visit</h1>
+    <p>
+      India is a beautiful country, there is no doubt about that, its cultural diversity provides thousands of perspectives for the most intrepid traveler; from natural landscapes of incalculable beauty, to palaces, museums, temples, galleries and popular squares that leave anyone astonished; every corner of this wonderful country has something to offer.
+    </p>
+    <p>
+      Dare to discover India and its best tourist places at the hands of Bollywood Dance, immerse yourself in the depths of its culture and traditions learning about the most popular sights and the most remote spaces of the country of a thousand colors.
+    </p>
+  </div>
+  <div class="container-fluid bg-dark p-5">
+    <div id="cardview" class="container-fluid bg-dark text-white list-group list-group-horizontal" style="height: 500px;"> 
+      <div class="col-sm-10">
+        <img src="img1.png" style="width: 100%;height: 100%;">
+      </div>
+      <div class="col-sm-2">
+        <h2 class="text-success">20 places to visit in New Delhi</h2>
+        <p>
+          India is a beautiful country, there is no doubt about that, its cultural diversity provides thousands of perspectives for the most intrepid traveler; from natural landscapes of incalculable beauty, to palaces, museums, temples, galleries and popular squares that leave anyone astonished; every corner of this wonderful country has something to offer.
+        </p>
+        <a href="#" class="btn btn-primary">See more..</a>
+      </div>
+    </div>
+    <br>
+  </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
